@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <meta charset="UTF-8">        
+    <link rel="dns-prefetch" href="//res.tongbanjie.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//hm.baidu.com">
+    <link rel="dns-prefetch" href="//eiv.baidu.com">      
+    <link rel="dns-prefetch" href="//stats.g.doubleclick.net">
+    <title>铜板街-成本中心账户</title>    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
+    <link type="images/x-icon" rel="shortcut icon" href="https://res.tongbanjie.com/build/imgs/favorite.ico">
+    <link href="@@@PREFIX@@@/libs/jQuery.filer/jquery.filer.css?v=@@@TBJAPP_VERSION@@@" rel="stylesheet" type="text/css"/>
+    <link href="@@@PREFIX@@@/libs/bootstrap/style-dark.min.css?v=@@@TBJAPP_VERSION@@@" rel="stylesheet" type="text/css"/>
+    <link href="@@@PREFIX@@@/pages/index/index.css?v=@@@TBJAPP_VERSION@@@" rel="stylesheet" type="text/css"/>
+  </head>         
+  <body style="background: #fff">                 
+    <div class="container" id="container">    
+      <header>    
+        <div class="tbj-nav">
+          <div class="img-logo"></div>
+          <ul class='tbj-nav-list'> 
+            <li>
+              <a href="./index.html">
+                账户管理
+              </a>  
+            </li>      
+            <li class="current">
+              <a href="./uploadFile.html">
+                上传成本
+              </a>
+            </li>      
+          </ul>
+          <ul class="tlist">
+            <li><a href="javascript:void(0)">退出</a></li>
+          </ul>
+        </div>
+      </header> 
+      <div class="tbj-cost-contents">
+        <div class="upload_page">
+          <div>
+            <form action="/upload/upload" method="post" enctype="multipart/form-data">
+              <div class='upload-file'>
+                <label>上传文件</label>
+                <span><input type="file" name="filedata" id="filer_input" multiple="multiple"></span>
+              </div>
+              <!-- <p><button type="submit" class='u-btn'>确定</button></p> -->
+            </form>
+            <div class='recently'><a href='./recently.html'>最新上传记录</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="@@@PREFIX@@@/libs/jquery.min.js"></script>
+    <script src="@@@PREFIX@@@/libs/jquery.filer.js"></script>
+    <script src="@@@PREFIX@@@/pages/index/upload.js?v=@@@TBJAPP_VERSION@@@"></script>
+  </body>
+</html>

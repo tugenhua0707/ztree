@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <meta charset="UTF-8">
+    <link rel="dns-prefetch" href="//res.tongbanjie.com">  
+    <link rel="dns-prefetch" href="//www.google-analytics.com">     
+    <link rel="dns-prefetch" href="//hm.baidu.com">            
+    <link rel="dns-prefetch" href="//eiv.baidu.com">
+    <link rel="dns-prefetch" href="//stats.g.doubleclick.net">                
+    <title>铜板街-成本中心账户</title>  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
+    <link type="images/x-icon" rel="shortcut icon" href="https://res.tongbanjie.com/build/imgs/favorite.ico">
+    <link href="@@@PREFIX@@@/libs/zTreeStyle/zTreeStyle.css?v=@@@TBJAPP_VERSION@@@" rel="stylesheet" type="text/css"/>
+    <link href="@@@PREFIX@@@/libs/modal/modal.min.css?v=@@@TBJAPP_VERSION@@@" rel="stylesheet" type="text/css"/>
+  </head>       
+  <body style="background: #fff">                 
+    <div class='container'>       
+      <div class='btn'>点击btn</div>
+    </div>
+    <script src="@@@PREFIX@@@/libs/jquery.min.js"></script>
+    <script src="@@@PREFIX@@@/libs/jquery.ztree.core.js"></script>
+    <script src="@@@PREFIX@@@/libs/jquery.ztree.exedit.js"></script>
+    <script src="@@@PREFIX@@@/libs/modal/modal.min.js"></script>
+    <script src="@@@PREFIX@@@/pages/index/ztree.js?v=@@@TBJAPP_VERSION@@@"></script>
+    <script>
+      var zNodes = [
+        { id:1, parentId:null, accName:"父节点 1",level:0,status:1,accId: 0,
+          subList:[
+            { 
+              id:11,    
+              parentId:1,
+              accId: 1, 
+              accName:"叶子节点 1-1", 
+              subList: [
+                { 
+                  id:111, 
+                  parentId:11, 
+                  accName:"叶子节点 1-1-1",
+                  status:1,  
+                  accId: 2,
+                  subList: [
+                    { id:1111, parentId:111, accName:"叶子节点 1-1-2",status:1, accId: 3}
+                  ]  
+                }  
+              ] 
+            },    
+            { id:12, parentId:1, accName:"叶子节点 1-2",accId: 0},
+            { id:13, parentId:1, accName:"叶子节点 1-3",accId: 0}
+          ]  
+        },
+        { id:2, parentId:null, accName:"父节点 2",status:1,level:0, accId: 0,
+          subList: [
+            { id:21, parentId:2, accName:"叶子节点 2-1", accId: 1},
+            { id:22, parentId:2, accName:"叶子节点 2-2", accId: 1},
+            { id:23, parentId:2, accName:"叶子节点 2-3", accId: 1}
+          ]
+        },  
+        { id:3, parentId:null, accName:"父节点 3",status:1,level:0, accId: 0,
+          subList: [
+            { id:31, parentId:3, accName:"叶子节点 3-1", accId: 1},
+            { id:32, parentId:3, accName:"叶子节点 3-2", accId: 1},
+            { id:33, parentId:3, accName:"叶子节点 3-3", accId: 1}
+          ]
+        } 
+      ];
+      var clickRenderCallback = function(treeNode){
+        console.log(treeNode);
+      }
+      var zSingle = new ZTreeSingle({
+        clickRenderCallback: clickRenderCallback
+      });
+      $('.btn').click(function() {
+        zSingle.modalZtree(zNodes);     
+      });
+    </script>
+  </body>
+</html>
